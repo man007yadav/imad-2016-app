@@ -72,50 +72,49 @@ function createTemplate(data){
     content=data.content;
     
     var htmlTemplate=`<html>
- <head>
-     <title>
-         ${title};
-     </title>
-     
-     <!--For mobile view-->
-     
-     <meta name="viewport" content="width=device-width ,intial-scale=1"/>
-     
-     <link href="/ui/style.css" rel="stylesheet"/>
-     
-     
-     
-     
- </head>
- 
- <body>
-     <div class="container">
-         <div>
-             <a href='/'>Home</a>
-         </div>
-         <hr/>
-         
-         <h2>
-             ${heading}
-         </h2>
-         
-         <div>
-             ${date}
-         </div>
-         
-         <div>
-             
-           ${content}
-             
-         </div>
-     </div>
-     
- </body>
+                         <head>
+                             <title>
+                                 ${title};
+                             </title>
+                             
+                             //For mobile view
+                             
+                             <meta name="viewport" content="width=device-width ,intial-scale=1"/>
+                             
+                             <link href="/ui/style.css" rel="stylesheet"/>
+                             
+                             
+                             
+                         </head>
+                         
+                         <body>
+                             <div class="container">
+                                 <div>
+                                     <a href='/'>Home</a>
+                                 </div>
+                                 <hr/>
+                                 
+                                 <h2>
+                                     ${heading}
+                                 </h2>
+                                 
+                                 <div>
+                                     ${date}
+                                 </div>
+                                 
+                                 <div>
+                                     
+                                   ${content}
+                                     
+                                 </div>
+                             </div>
+                             
+                         </body>
+                        
+                        
+                        </html>`;
 
-
-</html>`;
-
-return htmlTemplate;
+            return htmlTemplate;
     
 }
 
@@ -127,7 +126,7 @@ app.get('/:articleName',function (req,res) {
     //articleName==article-one
     //article[articleName]==content {} article one
     //var articleName=request.params.articleName;
-   res.send(createTemplate(articles['article-one'])); 
+   res.send(createTemplate(articles['article-two'])); 
 });
 
 //<!--app.get('/article-two',function (req,res) {
