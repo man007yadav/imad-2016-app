@@ -76,8 +76,7 @@ function createTemplate(data){
                              <title>
                                  ${title};
                              </title>
-                             
-                             //For mobile view
+
                              
                              <meta name="viewport" content="width=device-width ,intial-scale=1"/>
                              
