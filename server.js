@@ -127,7 +127,7 @@ app.get('/:articleName',function (req,res) {
     //articleName==article-one
     //article[articleName]==content {} article one
     //var articleName=request.params.articleName;
-   res.send(createTemplate(articles[articleOne])); 
+   res.send(createTemplate(articles['article-one'])); 
 });
 
 //<!--app.get('/article-two',function (req,res) {
