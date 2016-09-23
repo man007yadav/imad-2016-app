@@ -42,10 +42,10 @@ button.onclick = function(){
             }
         }
         //Not done yet
-    }
+    };
     
     //Make the request
     request.open('GET',"http://man007yadav.imad.hasura-app.io/counter",true);
     request.send(null);
     
-}
+};
