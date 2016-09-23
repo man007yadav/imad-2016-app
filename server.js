@@ -23,7 +23,7 @@ var articles = {
                     This paragraph three, and cant help making this page at all.
                 </p>
                  `
-    },
+},
     
     'article-two' :{
       title: "Manoj Yadav | Article two",
@@ -59,7 +59,7 @@ var articles = {
                     This paragraph three, and cant help making this page at all.
                 </p>
                  `
-    }
+}
   
     
 };
@@ -126,8 +126,8 @@ app.get('/', function (req, res) {
 app.get('/:articleName',function (req,res) {
     //articleName==article-one
     //article[articleName]==content {} article one
-    var articleName=request.params.articleName;
-   res.send(createTemplate(articles[articleName])); 
+    //var articleName=request.params.articleName;
+   res.send(createTemplate(articles[articleOne])); 
 });
 
 //<!--app.get('/article-two',function (req,res) {
