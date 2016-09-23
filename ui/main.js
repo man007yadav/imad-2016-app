@@ -21,16 +21,31 @@ img.onclick = function(){
     //img.style.marginLeft= '100px';
 }
 
+//Counter code
 
 var button = document.getElementById('counter');
-var counter = 0;
-
-
 
 button.onclick = function(){
     
-    //Render the variable in correct span
-    var span = document.getElementById('count');
-    counter = counter + 1 ;
-    span.innerHTML = counter.toString();
+    //Create a request object
+    var request = new XMLHttpRequest();
+    
+    //Capture the response in a variable
+    request.onreadystatechange = function(){
+        if(request.readystate == XMLHttpRequest.DONE){
+            //Take some action
+            if(request.state === 200){
+                    var counter = request.responseText;
+                    var span = document.getElementById('count');
+                    //counter = counter + 1 ;
+                    span.innerHTML = counter.toString();
+            }
+        }
+        //Not done yet
+    }
+    
+    //Make the request
+    request.open('GET',"http://man007yadav.imad.hasura-app.io/counter",true);
+    request.send(null);
+    
 }
