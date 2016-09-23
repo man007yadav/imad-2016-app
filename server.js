@@ -121,11 +121,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName',function (req,res) {
+app.get('/:articleName', function (req,res) {
     //articleName==article-one
     //article[articleName]==content {} article one
-    //var articleName=request.params.articleName;
-   res.send(createTemplate(articles['article-two'])); 
+    var articleName=request.params.articleName;
+   res.send(createTemplate(articles[articleName])); 
 });
 
 //<!--app.get('/article-two',function (req,res) {
