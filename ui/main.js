@@ -27,18 +27,15 @@ img.onclick = function(){
 
 var button = document.getElementById('counter');
 
-button.onclick = function(){
+button.onclick = function () {
     
     //Create a request object
     var request = new XMLHttpRequest();
     
-    console.log('working');
-    
     //Capture the response in a variable
-    request.onreadystatechange = function(){
+    request.onreadystatechange = function () {
          
-        
-        if(request.readystate === XMLHttpRequest.DONE){
+         if(request.readystate === XMLHttpRequest.DONE){
             //Take some action
            
             if(request.state === 200){
@@ -54,7 +51,7 @@ button.onclick = function(){
     };
     
     //Make the request
-    request.open('GET','http://man007yadav.imad.hasura-app.io/counter',true);
+    request.open("GET","http://man007yadav.imad.hasura-app.io/counter",true);
     request.send(null);
     
 };
