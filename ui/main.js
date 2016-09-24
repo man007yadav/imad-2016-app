@@ -34,10 +34,11 @@ button.onclick = function(){
     
     //Capture the response in a variable
     request.onreadystatechange = function(){
+         console.log('working');
         
         if(request.readystate === XMLHttpRequest.DONE){
             //Take some action
-            console.log('working');
+           
             if(request.state === 200){
                     
                     var counter = request.responseText;
