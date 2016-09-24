@@ -37,8 +37,9 @@ button.onclick = function(){
         
         if(request.readystate === XMLHttpRequest.DONE){
             //Take some action
+            console.log('working');
             if(request.state === 200){
-                    console.log('working');
+                    
                     var counter = request.responseText;
                     var span = document.getElementById('count');
                     //counter = counter + 1 ;
