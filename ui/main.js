@@ -32,9 +32,11 @@ button.onclick = function(){
     //Create a request object
     var request = new XMLHttpRequest();
     
+    console.log('working');
+    
     //Capture the response in a variable
     request.onreadystatechange = function(){
-         console.log('working');
+         
         
         if(request.readystate === XMLHttpRequest.DONE){
             //Take some action
