@@ -66,8 +66,7 @@ var submit = document.getElementById('submit_btn');
      //Create a request object
     var request = new XMLHttpRequest();
     
-     request.open("GET","http://man007yadav.imad.hasura-app.io/submit-name?name="+name,true);
-    
+     
     //Capture the response in a variable
     request.onreadystatechange = function () {
          
@@ -100,7 +99,7 @@ var submit = document.getElementById('submit_btn');
     var name = nameInput.value;
     
     //Make the request
-   
+    request.open("GET","http://man007yadav.imad.hasura-app.io/submit-name?name="+name,true);
     request.send(null);
     
  };
