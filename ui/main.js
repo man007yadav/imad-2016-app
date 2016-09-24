@@ -58,8 +58,7 @@ button.onclick = function () {
 
 //Submit name
 
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_btn');
 
     submit.onclick = function(){
@@ -74,6 +73,8 @@ var submit = document.getElementById('submit_btn');
             //Take some action
            
             if(request.state === 200){
+                
+                    
                     
                    //Capture a list of names and render it as a list
                     var names = request.responseText;
@@ -92,6 +93,9 @@ var submit = document.getElementById('submit_btn');
         }
         //Not done yet
     };
+    
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     
     //Make the request
     request.open("GET","http://man007yadav.imad.hasura-app.io/submit-name?name="+name,true);
