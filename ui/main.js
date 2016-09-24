@@ -17,7 +17,7 @@ function moveRight(){
 
 img.onclick = function(){
     
-    console.log('working');
+    
     
     var interval = setInterval(moveRight,50);
     //img.style.marginLeft= '100px';
@@ -34,6 +34,7 @@ button.onclick = function(){
     
     //Capture the response in a variable
     request.onreadystatechange = function(){
+        console.log('working');
         if(request.readystate === XMLHttpRequest.DONE){
             //Take some action
             if(request.state === 200){
