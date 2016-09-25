@@ -70,7 +70,7 @@ var submit = document.getElementById('submit_btn');
     //Capture the response in a variable
     request.onreadystatechange = function () {
          
-         if(request.readystate === XMLHttpRequest.DONE){
+         if(request.readystate === 4){
             //Take some action
            
             if(request.state === 200){
